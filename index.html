@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title>Formulário de Contato</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+        <script src="validacao.js" ></script>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+         .visible {
+            visibility: visible;
+        }
+        .erro {
+            border-color: red;
+        }
+        .correto {
+            border-color: green;
+        }
+        .errospan {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mx-auto bg-light mt-1 w-90">
+        <header class="row">
+            <div id="barra_acessibilidade" class="invisible col-12">
+                <ul id="atalhos">
+                    <li><a href="#menu" accesskey="1">Ir para menu [1]</a></li>
+                    <li><a href="#formulario" accesskey="2">Ir para formulário [2]</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-12">
+                    <img src="images/logo2.png" alt="Logotipo da empresa com dois triângulos sobrepostos.">
+                </div>
+
+                <div class="col-sm-9 col-12">
+                    <h1>Empresa XPTO</h1>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="row">
+            <div class="col-12">
+                <h2 id="menu" hidden>Menu</h2>
+            </div>
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Página
+                                    atual)</span></a>
+                            <a class="nav-item nav-link" href="#">Contato</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <article class="col-12">
+                <h2 id="formulario">Formulário de Contato</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome*</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu Nome">
+                        <span role="alert" id="erronome" class="invisible">Campo nome obrigatório</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Endereço de email*</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email">
+                        <span role="alert" id="erroemail" class="invisible">Campo email obrigatório</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem*</label>
+                        <textarea class="form-control form-control-sm" id="mensagem" name="mensagem"></textarea>
+                        <span role="alert" id="erromensagem" class="invisible">Campo mensagem obrigatório</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="validar()">Enviar</button>                    
+                </form>
+            </article>
+        </section>
+
+        <footer class="row">
+            <div class="col-12">
+                <p>* Campos obrigatórios</p>
+            </div>
+            <div class="col-12">
+                <p>Copyright © 2023</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <noscript>Atualize seu navegador</noscript>
+
+</body>
+
+</html>
